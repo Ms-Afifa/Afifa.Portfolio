@@ -223,3 +223,47 @@ const animateSkills = () => {
 };
 
 window.addEventListener("scroll", animateSkills);
+
+
+const steps = document.querySelectorAll(".process-step");
+const panels = document.querySelectorAll(".process-panel");
+
+steps.forEach(step => {
+  step.addEventListener("click", () => {
+    
+    // remove active
+    steps.forEach(s => s.classList.remove("active"));
+    panels.forEach(p => p.classList.remove("active"));
+
+    // add active
+    step.classList.add("active");
+    const target = step.getAttribute("data-step");
+
+    document
+      .querySelector(`.process-panel[data-step="${target}"]`)
+      .classList.add("active");
+  });
+});
+
+
+
+const toggleBtns = document.querySelectorAll(".toggle-btn");
+const tabs = document.querySelectorAll(".tab-content");
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    toggleBtns.forEach(b => b.classList.remove("active"));
+    tabs.forEach(t => t.classList.remove("active"));
+
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+
+    // animate bars
+    if (btn.dataset.tab === "tools") {
+      document.querySelectorAll(".fill").forEach(bar => {
+        bar.style.width = bar.dataset.width;
+      });
+    }
+  });
+});
