@@ -2,44 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Musea</title>
-  <link rel="stylesheet" href="project.css" />
-  <style>
-    .mob1-image {
-      transition: transform 0.3s ease;
-      transform-origin: center;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <div class="container">
-    <div class="image-box">         
-      <img class="mob/Musea Template.png" alt="Product Image">
-    </div>
-    
 
-      <div class="resize-buttons">
-        <button class="resize-button" onclick="zoomImage('in')">Zoom In</button>
-        <button class="resize-button" onclick="zoomImage('out')">Zoom Out</button>
+<section class="case-study">
+  <div class="container">
+
+    <!-- LEFT: IMAGE -->
+    <div class="image-section">
+      <div class="image-wrapper">
+        <img id="caseImage" src="your-image.jpg" alt="Case Study Image"/>
+      </div>
+
+      <!-- ZOOM CONTROLS -->
+      <div class="zoom-controls">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">−</button>
+        <button onclick="resetZoom()">Reset</button>
       </div>
     </div>
+
+    <!-- RIGHT: CONTENT -->
+    <div class="content-section">
+      <h1>Project Title</h1>
+      <p class="subtitle">UI/UX Case Study</p>
+
+      <div class="info">
+        <div>
+          <h3>Overview</h3>
+          <p>
+            This project focuses on creating a seamless user experience for a modern digital product. 
+            The goal was to improve usability, accessibility, and visual consistency.
+          </p>
+        </div>
+
+        <div>
+          <h3>Problem</h3>
+          <p>
+            Users faced navigation difficulties and inconsistent layouts across the platform.
+          </p>
+        </div>
+
+        <div>
+          <h3>Solution</h3>
+          <p>
+            A clean design system, improved hierarchy, and intuitive flows were implemented.
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <!-- JavaScript placed at the end -->
-  <script>
-    let currentScale = 1;
+<script>
+let scale = 1;
+const image = document.getElementById("caseImage");
 
-    function zoomImage(action) {
-      const img = document.querySelector(".mob1-image");
-      if (action === "in" && currentScale < 2) {
-        currentScale += 0.1;
-      } else if (action === "out" && currentScale > 0.5) {
-        currentScale -= 0.1;
-      }
-      img.style.transform = `scale(${currentScale})`;
-    }
-    
-  </script>
+function zoomIn() {
+  scale += 0.2;
+  image.style.transform = `scale(${scale})`;
+}
+
+function zoomOut() {
+  scale = Math.max(1, scale - 0.2);
+  image.style.transform = `scale(${scale})`;
+}
+
+function resetZoom() {
+  scale = 1;
+  image.style.transform = "scale(1)";
+}
+</script>
+
 </body>
 </html>
