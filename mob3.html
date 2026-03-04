@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- HERO / HEADER -->
+<section class="case-header">
+  <div class="header-container">
+    <h1>Project Title</h1>
+    <p class="subtitle">UI/UX Case Study • 2025</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="case-study">
+  <div class="container">
+
+    <!-- IMAGE -->
+    <div class="image-section">
+      <div class="image-wrapper">
+        <img id="caseImage" src="mob/Musea Template.png" alt="Case Study Image"/>
+      </div>
+
+      <div class="zoom-controls">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">−</button>
+        <button onclick="resetZoom()">Reset</button>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-section">
+
+      <div class="info">
+        <div>
+          <h3>Overview</h3>
+          <p>
+            This project focuses on creating a seamless user experience for a modern digital product.
+          </p>
+        </div>
+
+        <div>
+          <h3>Problem</h3>
+          <p>
+            Users faced navigation issues and inconsistent layouts.
+          </p>
+        </div>
+
+        <div>
+          <h3>Solution</h3>
+          <p>
+            A structured design system and improved hierarchy solved the issues.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+let scale = 1;
+const image = document.getElementById("caseImage");
+
+function zoomIn() {
+  scale += 0.2;
+  image.style.transform = `scale(${scale})`;
+}
+
+function zoomOut() {
+  scale = Math.max(1, scale - 0.2);
+  image.style.transform = `scale(${scale})`;
+}
+
+function resetZoom() {
+  scale = 1;
+  image.style.transform = "scale(1)";
+}
+</script>
+
+</body>
+</html>
