@@ -42,22 +42,28 @@
 }
 /* 🌙 DARK MODE */
 body.dark {
-  --bg-main: #0b0d12;
-  --bg-soft: #495380;
-  --bg-elevated: #1b1f32;
+  /* 🖤 TRUE BLACK BASE */
+  --bg-main: #050505;          /* deep black */
+  --bg-soft: #0f0f10;          /* subtle section contrast */
+  --bg-elevated: #18181b;      /* cards / surfaces */
 
-  --text-primary: #e5e7eb;
-  --text-secondary: #a1a1aa;
+  /* ✍️ TEXT */
+  --text-primary: #fafafa;     /* near white */
+  --text-secondary: #a1a1aa;   /* soft gray */
   --text-muted: #71717a;
 
-  --border-color: rgba(255,255,255,0.08);
+  /* 🧱 BORDERS */
+  --border-color: rgba(255, 255, 255, 0.08);
 
-  --card-bg: rgba(22, 26, 43, 0.65);
-  --card-border: rgba(255, 255, 255, 0.08);
+  /* 🪟 CARDS (glass effect) */
+  --card-bg: rgba(24, 24, 27, 0.7);
+  --card-border: rgba(255, 255, 255, 0.06);
 
-  --hover-bg: rgba(124, 58, 237, 0.12);
+  /* ✨ HOVER */
+  --hover-bg: rgba(124, 58, 237, 0.15);
 
-  --shadow-soft: 0 25px 60px rgba(0,0,0,0.45);
+  /* 🌑 SHADOW */
+  --shadow-soft: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 :root {
   /* 📏 SPACING SCALE (8pt system) */
