@@ -72,14 +72,14 @@ body {
 
 .image-wrapper {
   width: 100%;
-  max-width: 520px;
+  max-width: clamp(500px, 60vw, 800px); /* 🔥 responsive scaling */
   margin: 0 auto;
   overflow: hidden;
   border-radius: 20px;
   background: var(--card);
   border: 1px solid var(--border);
-  padding: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  padding: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .image-wrapper img {
