@@ -39,19 +39,28 @@ body {
 .image-section {
   display: flex;
   flex-direction: column;
+  align-items: center;   /* ✅ centers image horizontally */
+  justify-content: center;
   gap: 16px;
 }
-
 .image-wrapper {
+  width: 100%;
+  max-width: 520px;   /* ✅ controls size */
+  margin: 0 auto;     /* ✅ center block */
+  
   overflow: hidden;
   border-radius: 20px;
   background: var(--card);
   border: 1px solid var(--border);
-  padding: 10px;
+  padding: 14px;      /* slightly increased for premium feel */
 }
 
 .image-wrapper img {
   width: 100%;
+  height: auto;
+  display: block;
+  
+  transform: scale(1.05);   /* ✅ slight zoom by default */
   transition: transform 0.3s ease;
   cursor: zoom-in;
 }
