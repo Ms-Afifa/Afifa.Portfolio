@@ -42,28 +42,29 @@
 }
 /* 🌙 DARK MODE */
 body.dark {
-  /* 🖤 TRUE BLACK BASE */
-  --bg-main: #050505;          /* deep black */
-  --bg-soft: #0f0f10;          /* subtle section contrast */
-  --bg-elevated: #18181b;      /* cards / surfaces */
+  /* 🖤 BASE LAYERS (clear separation) */
+  --bg-main: #000000;     /* pure black */
+  --bg-soft: #0a0a0a;     /* section background */
+  --bg-elevated: #141414; /* cards */
+  --bg-top: #1c1c1f;      /* hover / raised */
 
   /* ✍️ TEXT */
-  --text-primary: #fafafa;     /* near white */
-  --text-secondary: #a1a1aa;   /* soft gray */
-  --text-muted: #71717a;
+  --text-primary: #f5f5f5;
+  --text-secondary: #b3b3b3;
+  --text-muted: #7a7a7a;
 
   /* 🧱 BORDERS */
-  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(255, 255, 255, 0.06);
 
-  /* 🪟 CARDS (glass effect) */
-  --card-bg: rgba(24, 24, 27, 0.7);
-  --card-border: rgba(255, 255, 255, 0.06);
+  /* 🪟 CARDS */
+  --card-bg: #141414;
+  --card-border: rgba(255, 255, 255, 0.05);
 
-  /* ✨ HOVER */
-  --hover-bg: rgba(124, 58, 237, 0.15);
+  /* ✨ INTERACTION */
+  --hover-bg: #1f1f23;
 
-  /* 🌑 SHADOW */
-  --shadow-soft: 0 30px 80px rgba(0, 0, 0, 0.6);
+  /* 🌑 DEPTH */
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.8);
 }
 :root {
   /* 📏 SPACING SCALE (8pt system) */
